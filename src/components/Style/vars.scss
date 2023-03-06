@@ -1,0 +1,25 @@
+$body-background-color: #f3f7fa;
+$font-family-main: "Open Sans";
+$font-style: normal;
+
+$box-bg-color: #ffffff;
+$text-color: #4a4a4a;
+$detail-title-color: #a0b0b9;
+$label-hover-bg-color: #f1fcff;
+$checkbox-border-color: #9abbce;
+$active-color: #2196f3;
+$tab-active-color: #ffffff;
+$tab-border-color: #dfe5ec;
+
+@mixin font($ff: $font-family-main, $fst: $font-style, $fw: 400, $fsz: 12px, $lh: "", $ls: "") {
+  font-family: $ff;
+  font-style: $fst;
+  font-weight: $fw;
+  font-size: $fsz;
+  @if $lh != "" {
+    line-height: $lh;
+  }
+  @if $ls != "" {
+    letter-spacing: $ls;
+  }
+}

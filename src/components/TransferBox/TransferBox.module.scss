@@ -1,0 +1,56 @@
+@import "../Style/vars.scss";
+
+.count-transfer {
+  width: 100%;
+  max-width: 504px;
+  margin: 0 auto 20px auto;
+  padding-bottom: 10px;
+
+  @media screen and (min-width: 756px) {
+    margin-right: 20px;
+    width: 232px;
+  }
+
+  &-title {
+    @include font($font-family-main, $font-style, 600, 12px, 12px, 0.5px);
+    text-transform: uppercase;
+    color: $text-color;
+    margin: 20px 20px 10px 20px;
+  }
+
+  LABEL {
+    display: flex;
+    align-items: center;
+    @include font($font-family-main, $font-style, 400, 13px, 20px, "");
+    color: $text-color;
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $label-hover-bg-color;
+    }
+
+    INPUT {
+      opacity: 0;
+    }
+
+    DIV {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $checkbox-border-color;
+      border-radius: 2px;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+    SPAN {
+      margin-left: 10px;
+    }
+
+    > INPUT:checked + DIV {
+      border-color: $active-color;
+      background: url(../../img/checked.png) no-repeat center;
+    }
+  } 
+}

@@ -1,0 +1,48 @@
+@import "../Style/vars.scss";
+
+.airlines {
+  width: 100%;
+  max-width: 504px;
+  margin: 0 auto 20px auto;
+  padding: 20px 20px 10px 20px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 36px;
+
+    .price {
+      color: $active-color;
+      @include font($font-family-main, normal, 600, 24px, 24px, "");
+      text-transform: uppercase;
+    }
+    .logo {
+      height: 36px;
+      margin-top: -5px;
+    }
+  }
+
+  .passage {
+    display: flex;
+    height: 39px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; 
+
+    .detail {
+      flex-grow: 1;
+      max-width: 33.33%;
+
+      &-title {
+        @include font($font-family-main, $font-style, 600, 12px, 18px, 0.5px);
+        color: $detail-title-color;
+        text-transform: uppercase;
+      }
+      &-content {
+        @include font($font-family-main, $font-style, 600, 14px, 21px, "");
+        color: $text-color;
+      }
+    }
+  }
+}
