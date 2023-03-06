@@ -1,1 +1,1 @@
-https://test2602ma.vercel.app/
+https://aviasales06.vercel.app/
